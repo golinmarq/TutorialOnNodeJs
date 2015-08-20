@@ -14,7 +14,7 @@ CREATE TABLE `productcategory` (
   `ModifiedDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `idx_productcategory_CreatedDate` (`CreatedDate`) COMMENT 'Added Index on the createdate'
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 
@@ -32,7 +32,7 @@ CREATE TABLE `product` (
   KEY `FKC_Product_to_ProductCategory_idx` (`Id`,`ProductCategory_FK`),
   KEY `FKC_Product_to_ProductCategory` (`ProductCategory_FK`),
   CONSTRAINT `FKC_Product_to_ProductCategory` FOREIGN KEY (`ProductCategory_FK`) REFERENCES `productcategory` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 STEP 2:
